@@ -9,12 +9,18 @@ This Docker image is based on Kali Linux rolling release, configured to run an X
 
 ##### Pull image
 ```
-docker pull ghcr.io/warshipfucker/kali-xrdp:main
+docker pull ghcr.io/warshipfucker/kali-xrdp:latest
 ```
+##### Rename Docker image 
+docker tag ghcr.io/warshipfucker/kali-xrdp:latest kali-xrdp:latest
 ##### Run container
+Run command
+
 ```
-docker run -it --name kali-xrdp -v C:\dev-env\volumes\kali/run:/run -v C:\dev-env\volumes\kali/home:/home -v C:\dev-env\volumes\kali/mnt:/mnt  -v C:\dev-env\volumes\kali/opt:/opt -p 3390:3389 -p 2222:22  -p 8081:8080  ghcr.io/warshipfucker/kali-xrdp:main kali kali yes 
+docker run -it --name kali-linux -v C:\dev-env\volumes\kali/run:/run -v C:\dev-env\volumes\kali/home:/home -v C:\dev-env\volumes\kali/mnt:/mnt  -v C:\dev-env\volumes\kali/opt:/opt -p 3390:3389 -p 2222:22  -p 8081:8080 kali-xrdp:latest kali kali yes 
 ```
+##### Develop 
+Clone Repository: in progress.....
 ##### Connect
 On your Windows Host
 1. Press Win+R buttons
